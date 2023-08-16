@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bank.css">
+    <title>Saving Bank Account</title>
+  </head>
+<body>
+    <header>
+        <h1>Saving Bank Account</h1>
+      </header>
+      <main>
+        <section class="account-details">
+          <h2>Account Details</h2>
+          <p><strong>Account ID:</strong> <span id="account-id">43251635</span></p>
+          <p><strong>Balance:</strong> <span id="account-balance">$1,000.00</span></p>
+        </section>
+        <section class="transaction">
+          <h2>Make a Transaction</h2>
+          <form id="transaction-form">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            <label for="currency">Currency:</label>
+            <select id="currency" name="currency" required>
+              <option value="USD">USD</option>
+              <option value="CAD">CAD</option>
+              <option value="KES">KES</option>
+              <option value="GBP">GBP</option>
+            </select>
+            <button type="submit">Deposit</button>
+          </form>
+          <p id="transaction-status"></p>
+        </section>
+        <section class="currency-converter">
+            <h2>Currency Converter</h2>
+            <form id="conversion-form">
+            <label for="amount-convert">Amount:</label>
+            <input type="number" id="amount-convert" name="amount-convert" required>
+            <label for="from-currency">From Currency:</label>
+            <select id="from-currency" name="from-currency" required>
+                <option value="USD">USD</option>
+                <option value="CAD">CAD</option>
+                <option value="KES">KES</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <label for="to-currency">To Currency:</label>
+            <select id="to-currency" name="to-currency" required>
+                <option value="USD">USD</option>
+                <option value="CAD">CAD</option>
+                <option value="KES">KES</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <button type="submit">Convert</button>
+            </form>
+            <p id="conversion-result"></p>
+        </section>
+ 
+      </main>
+      <script src="bank.js"></script>
+</body>
+</html>
